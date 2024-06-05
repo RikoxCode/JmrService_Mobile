@@ -18,6 +18,7 @@ import {RouterLink} from "@angular/router";
 export class TableComponent  implements OnInit {
 
   public sheetmusics: any = []
+  public isLoading: boolean = true;
 
   constructor(
       private http: HttpClient
@@ -26,6 +27,7 @@ export class TableComponent  implements OnInit {
   ngOnInit() {
     this.http.get('https://metalink.netshlife.dev/api/v1/sheetmusics').subscribe((data: any) => {
       this.sheetmusics = data.data;
+      this.isLoading = false;
     });
   }
 
