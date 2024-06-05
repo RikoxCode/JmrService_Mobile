@@ -1,0 +1,27 @@
+<div>
+    <div class="px-4 sm:px-0">
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Detailed information's
+            about {{ item.title }}</h3>
+        <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">This music is composed by {{ item.composer }} and arranged by {{ item.arranger }}.</p>
+    </div>
+    <div class="mt-6 border-t border-gray-100">
+        <dl class="divide-y divide-gray-100">
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Title</dt>
+                <dd class="mb-2 text-sm font-bold tracking-tight text-gray-700 dark:text-gray-500">{{ item.title }}</dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Composer</dt>
+                <dd class="mb-2 text-sm font-bold tracking-tight text-gray-700 dark:text-gray-500">{{ item.composer }}</dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Arranger</dt>
+                <dd class="mb-2 text-sm font-bold tracking-tight text-gray-700 dark:text-gray-500">{{ item.arranger }}</dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+                <dt class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Publisher</dt>
+                <dd class="mb-2 text-sm font-bold tracking-tight text-gray-700 dark:text-gray-500">{{ item.publisher }}</dd>
+            </div>
+        </dl>
+    </div>
+</div>

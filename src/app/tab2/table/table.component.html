@@ -1,0 +1,17 @@
+<div class="px-auto">
+    <p class="flex justify-center mt-2 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Archive of
+        JMR</p>
+
+    <div class="w-full mx-5 border-1 border-slate-800 dark:border-slate-100"></div>
+
+    <div class="flex flex-wrap">
+        @for (sheetmusic of sheetmusics; track sheetmusic.id){
+            <button  routerLink="inspect" [queryParams]="{ slug: sheetmusic.slug }"
+                     class="block max-w-sm scale-75 p-6 mx-auto bg-slate-100 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ sheetmusic.title }}</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">This music is composed by {{ sheetmusic.composer }} and arranged by {{ sheetmusic.arranger }}. </p>
+            </button>
+        }
+    </div>
+</div>
